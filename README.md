@@ -12,119 +12,136 @@
   </p>
 </div>
 
-## 🌟 Key Features
-
-### 🏗️ Task Management
-- **Real-time task updates** with WebSocket connections
-- **Drag-and-drop** task organization
-- **Multiple views** (Kanban, List, Calendar)
-- **Task assignments** with team members
-
-### 👥 Collaboration
-- **Live presence indicators** showing who's online
-- **Instant notifications** for task updates
-- **Comment threads** on tasks
-- **Mention teammates** with @ notifications
-
-### 📊 Productivity
-- **Due date reminders**
-- **Progress tracking** with completion percentages
-- **Custom labels & filters**
-- **Activity history** for all changes
-
-### ⚙️ Administration
-- **Team management** with roles
-- **Project templates**
-- **Export/import** capabilities
-- **API access** for integrations
-
-## 🖥 Screenshots
+# 🚀 Full Stack FastAPI Template
 
 <div align="center">
-  <img src="screenshots/kanban-view.png" width="32%" alt="Kanban View"/>
-  <img src="screenshots/task-detail.png" width="32%" alt="Task Detail"/> 
-  <img src="screenshots/team-settings.png" width="32%" alt="Team Settings"/>
+  <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" width="200" alt="FastAPI Logo"/>
+  <h1>Production-Ready Full Stack Starter</h1>
+  <p>A complete foundation for your next FastAPI + React project</p>
+  
+  <p align="center">
+    <a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3ATest" target="_blank">
+      <img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test/badge.svg" alt="Test">
+    </a>
+    <a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/full-stack-fastapi-template" target="_blank">
+      <img src="https://coverage-badge.samuelcolvin.workers.dev/fastapi/full-stack-fastapi-template.svg" alt="Coverage">
+    </a>
+    <a href="https://github.com/fastapi/full-stack-fastapi-template/blob/master/LICENSE">
+      <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
+    </a>
+  </p>
 </div>
 
-## 🛠 Tech Stack
+## ✨ Features
 
-### Frontend
-- **Next.js 14** (App Router)
-- **tRPC** for type-safe API calls
-- **Tailwind CSS** with ShadCN components
-- **React DnD** for drag-and-drop
-- **Zod** for form validation
+### 🐍 Backend (FastAPI)
+- **SQLModel** ORM with PostgreSQL
+- **Pydantic** validation & settings
+- **JWT Authentication** with OAuth2
+- **Email password recovery**
+- **Pytest** test coverage
 
-### Backend
-- **Node.js** with Express
-- **WebSockets** for real-time updates
-- **Prisma** ORM
-- **PostgreSQL** database
-- **Redis** for pub/sub and caching
+### ⚛️ Frontend (React)
+- **TypeScript** with Vite
+- **Chakra UI** components
+- **Dark mode** support
+- **Playwright** E2E testing
+- **Auto-generated API client**
 
-### Infrastructure
-- **Docker** for containerization
+### 🛠 DevOps
+- **Docker Compose** ready
+- **Traefik** reverse proxy
 - **GitHub Actions** CI/CD
-- **Vercel** for frontend hosting
-- **Railway** for backend services
+- **HTTPS certificates** auto-config
 
-## 🚀 Getting Started
+## 📸 Screenshots
 
-### Prerequisites
-- Node.js v18+
-- PostgreSQL database
-- Redis instance (for real-time features)
+<div align="center">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    <img src="img/login.png" alt="Login Screen" style="border-radius: 8px;">
+    <img src="img/dashboard.png" alt="Admin Dashboard" style="border-radius: 8px;">
+    <img src="img/dashboard-dark.png" alt="Dark Mode" style="border-radius: 8px;">
+  </div>
+</div>
 
-### Installation
+## 🚀 Quick Start
 
-# Clone repository
-git clone https://github.com/yourusername/tasknova.git
-cd tasknova
+### Option 1: Clone Directly
 
-# Install dependencies
-npm install
+git clone https://github.com/fastapi/full-stack-fastapi-template.git
+cd full-stack-fastapi-template
 
-# Configure environment variables
+Option 2: Use Copier
+bash
+pipx install copier
+copier copy https://github.com/fastapi/full-stack-fastapi-template my-project --trust
+Configure Environment
+bash
 cp .env.example .env
-
-Database Setup
+# Generate secure keys:
+python -c "import secrets; print(secrets.token_urlsafe(32))"
+Start Services
 bash
-# Run database migrations
-npx prisma migrate dev --name init
-
-# Generate Prisma client
-npx prisma generate
-Running Locally
-bash
-# Start development server
-npm run dev
+docker-compose up -d
+🛠 Project Structure
+text
+├── backend/              # FastAPI application
+│   ├── app/              # Main application code
+│   ├── tests/            # Pytest tests
+│   └── requirements/     # Python dependencies
+├── frontend/             # React application
+│   ├── public/           # Static assets  
+│   ├── src/              # React components
+│   └── tests/            # Playwright tests
+├── deployment/           # Deployment configs
+└── docs/                 # Project documentation
+🔧 Configuration
+Essential Environment Variables
+ini
+SECRET_KEY=your_generated_key
+POSTGRES_PASSWORD=your_db_password
+FIRST_SUPERUSER=admin@example.com
+FIRST_SUPERUSER_PASSWORD=changeme
 📚 Documentation
-API Reference
+Backend Development
 
-Real-Time Architecture
+Frontend Development
 
 Deployment Guide
 
+Development Setup
+
 🤝 Contributing
-We welcome contributions! Please see our Contribution Guidelines for details.
+Fork the repository
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some feature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
 
 📜 License
-TaskNova is MIT licensed.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
+<div align="center"> <p>Built with ❤️ by the FastAPI community</p> </div> ```
+Key improvements made:
 
-<div align="center"> <p>Simplify teamwork with TaskNova</p> </div> ```
-Key features of this README:
+Modern Header with logo and badges in a clean layout
 
-Modern Header with badges showing the core technologies
+Organized Features section with emoji icons
 
-Organized Feature Sections with clear categorization
+Responsive Screenshot Grid for better visual appeal
 
-Visual Screenshots in a responsive grid layout
+Simplified Quick Start section with clear options
 
-Detailed Tech Stack breakdown by frontend/backend/infra
+Visual Project Structure with ASCII tree
 
-Comprehensive Setup Instructions including prerequisites
+Essential Config highlighted in code block
 
-Documentation Links for extended information
+Documentation Links in consistent format
 
-Professional Footer with license and contact info
+Clean Contributing section
+
+Professional Footer with license info
